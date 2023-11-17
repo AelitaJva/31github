@@ -17,6 +17,9 @@ public class toStringMethod {
         //
         //If you use toString() with a simple type (like a number), it will give you a String version of that number.
         //For example, if you have the number 42 and you use toString() on it, you get the String "42".
+        // toString() is a method that can turn an object or a simple piece of data into a text version of itself,
+        // making it easier to work with or display. If you use it with a basic piece of information, like a number,
+        // it will give you the number in a text form.
 
 
         int b = 100;
