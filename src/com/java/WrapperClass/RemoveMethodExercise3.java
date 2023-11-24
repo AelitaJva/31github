@@ -27,4 +27,8 @@ public class RemoveMethodExercise3 {
 
         return guests;
     }
+
+
+    List<String> guests = new ArrayList<>();
+    ArrayList <String> students = new ArrayList<>();
 }
