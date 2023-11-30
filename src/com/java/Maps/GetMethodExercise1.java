@@ -5,27 +5,38 @@ import java.util.Map;
 
 public class GetMethodExercise1 {
     public static void main(String[] args) {
+        String str = "Alice is girl and Bob is boy";
         String words = "apple banana apple orange banana apple";
-        Map<String, Integer> result = countWordFrequency(words);
-        System.out.println(result);
+        System.out.println(countWordFrequency(words));
+        System.out.println(countWordFrequency(str));
     }
 
-    public static Map<String, Integer> countWordFrequency(String sentence) {
-        // Create a HashMap to store word-frequency pairs
-        Map<String, Integer> wordFrequencyMap = new HashMap<>();
+    public static Map<String, Integer> countWordFrequency(String str) {
 
-        // Split the sentence into words using space as the delimiter
-        String[] words = sentence.split("\\s+");
+        Map<String, Integer> hashMap = new HashMap<>();
 
-        // Count the frequency of each word
+        // Splitting the words of string
+        // and storing them in the array.
+        // String[] words = str.split("\\s+");
+        String[] words = str.split(" ");
+
         for (String word : words) {
-            // Convert the word to lowercase to ensure case-insensitivity
-            String lowercasedWord = word.toLowerCase();
+            // Asking whether the HashMap contains the
+            // key or not. Will return null if not.
+            Integer countWordOccurrence = hashMap.get(word);
 
-            // Update the frequency in the map
-            wordFrequencyMap.put(lowercasedWord, wordFrequencyMap.getOrDefault(lowercasedWord, 0) + 1);
+
+            if (countWordOccurrence == null) {
+                // Storing the word as key and its
+                // occurrence as value in the HashMap.
+                hashMap.put(word, 1);
+            } else {
+                // Incrementing the value if the word
+                // is already present in the HashMap.
+                hashMap.put(word, countWordOccurrence + 1);
+            }
         }
 
-        return wordFrequencyMap;
+        return hashMap;
     }
 }
