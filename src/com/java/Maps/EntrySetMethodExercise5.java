@@ -50,7 +50,6 @@ public class EntrySetMethodExercise5 {
             }
         }
 
-
         return result.toArray(new String[0]);
     }
 
