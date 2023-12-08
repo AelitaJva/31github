@@ -20,7 +20,7 @@ public class StaticVariables {
 }
 
 class Sample {
-    // global var = means can be invoke from anywhere(from hundred on classes)
+    // global var = means can be invoke from anywhere(from hundred on classes) from static and instance var, methods
     // store the value only once here using the static keyword
     // and call that var anywhere to use that value
     // if need some changes, go here and change only one var and use it multiple time and anywhere
