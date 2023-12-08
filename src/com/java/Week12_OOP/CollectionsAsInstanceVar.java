@@ -42,7 +42,7 @@
 //    private double salary;
 //    private List<String> projects = new ArrayList<>();
 //
-//    public Employee(String name, int age, double department, Floor salary) {
+//    public Employee(String name, int age, double department) {
 //        this.name = name;
 //        this.age = age;
 //        this.department = department;
