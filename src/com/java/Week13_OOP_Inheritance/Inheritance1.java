@@ -5,6 +5,13 @@ public class Inheritance1 {
         CheckingAccount account = new CheckingAccount();
         account.setBalance(20);
         System.out.println(account.getBalance());
+
+        //System.out.println(account.getAccountNumber());
+        account.deposit(5000);
+        System.out.println(account.getBalance());
+
+        account.withdraw(2345);
+        System.out.println(account.getBalance());
     }
 }
 
@@ -15,6 +22,7 @@ public class Inheritance1 {
 // public, private, default access modifiers
 class BankAccount {
     private double balance;
+    private final long accountNumber = 0;
 
     public double getBalance() {
         return balance;
@@ -24,7 +32,17 @@ class BankAccount {
         this.balance = balance;
     }
 
+    public long getAccountNumber () {
+        return getAccountNumber();
+    }
 
+    public void withdraw (double amount) {
+        balance-=amount;
+    }
+
+    public void deposit (double amount) {
+        balance+=amount;
+    }
 
 }
 
