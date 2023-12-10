@@ -1,6 +1,6 @@
 package com.java.DemoOOP;
 
-import com.java.Week12_OOP.AccessModifier;
+import com.java.Week12_OOP_Encapsulation.AccessModifier;
 
 public class AccessModifierDemo {
     public static void main(String[] args) {
