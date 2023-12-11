@@ -29,7 +29,13 @@ public class Inheritance1 {
         System.out.println(account2.getBalance());
 
 
+        System.out.println("=========================");
 
+        CheckingAccount ch3 = new CheckingAccount(5000.00, 458768359, 20.00);
+        ch3.withdraw(900);
+        System.out.println(ch3.getBalance());
+        ch3.withdraw(400);
+        System.out.println(ch3.getBalance());
 
     }
 }
@@ -87,6 +93,7 @@ class BankAccount {
 
 class CheckingAccount extends BankAccount {
     private double monthlyFee;
+    private double dailytWithdrawAmount;
 
     public CheckingAccount (long accountNum, double monthlyFee) {
         super(accountNum);
@@ -106,5 +113,17 @@ class CheckingAccount extends BankAccount {
         // you can call public methods from parent class
 
         withdraw(monthlyFee);
+    }
+
+    // the users can only withdraw !1000 per day
+    @Override
+    public void withdraw (double amount) {
+        if(dailytWithdrawAmount + amount > 1000) {
+            System.out.println("You reached your daily limit you can only withdraw " + (1000 - dailytWithdrawAmount));
+        } else {
+            setBalance(getBalance() - amount);
+            dailytWithdrawAmount+=amount;
+        }
+        dailytWithdrawAmount+=amount;
     }
 }
